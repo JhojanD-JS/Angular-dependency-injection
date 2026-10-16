@@ -1,0 +1,45 @@
+<div class="overlay">
+    <div class="modal">
+        <div class="modal-header">
+            <h3>{{ title }}</h3>
+            <button class="close-button" type="button" (click)="close()">X</button>
+        </div>
+
+        <form class="form" (ngSubmit)="save()">
+            <label for="description">Descripción</label>
+            <input id="description" type="text" name="description"
+                placeholder="Ej. Supermercado" [(ngModel)]="form.description">
+
+            <div class="form-row">
+                <div>
+                    <label for="amount">Monto</label>
+                    <input id="amount" type="number" name="amount"
+                        min="0" step="0.01" [(ngModel)]="form.amount">
+                </div>
+                <div>
+                    <label for="date">Fecha</label>
+                    <input id="date" type="date" name="date" [(ngModel)]="form.date">
+                </div>
+            </div>
+
+            <label for="category">Categoría</label>
+            <select id="category" name="category" [(ngModel)]="form.category">
+                <option [ngValue]="ExpenseCategory.Housing">Vivienda</option>
+                <option [ngValue]="ExpenseCategory.Food">Alimentación</option>
+                <option [ngValue]="ExpenseCategory.Entertainment">Entretenimiento</option>
+                <option [ngValue]="ExpenseCategory.Health">Salud</option>
+                <option [ngValue]="ExpenseCategory.Transport">Transporte</option>
+                <option [ngValue]="ExpenseCategory.Others">Otros</option>
+            </select>
+
+            @if (showError) {
+                <p class="error-message">Completa la descripción, la fecha y un monto mayor a cero.</p>
+            }
+
+            <div class="form-buttons">
+                <button class="cancel-button" type="button" (click)="close()">Cancelar</button>
+                <button class="save-button" type="submit">Guardar</button>
+            </div>
+        </form>
+    </div>
+</div>

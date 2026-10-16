@@ -1,0 +1,35 @@
+.sidebar {
+    width: 220px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar a {
+    color: #33333b;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 10px 16px;
+    border-radius: 20px;
+    margin-bottom: 6px;
+}
+
+.sidebar a:hover {
+    background: #e2e2e7;
+}
+
+.sidebar a.active {
+    background: #b93a0c;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.icon {
+    margin-right: 8px;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+    }
+}

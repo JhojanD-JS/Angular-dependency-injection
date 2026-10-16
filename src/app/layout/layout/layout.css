@@ -1,0 +1,23 @@
+.page-body {
+    display: flex;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 20px;
+    min-height: calc(100vh - 200px);
+}
+
+@media (max-width: 768px) {
+    .page-body {
+        flex-direction: column;
+    }
+}

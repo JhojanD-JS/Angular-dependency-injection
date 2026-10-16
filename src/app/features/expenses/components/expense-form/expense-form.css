@@ -1,0 +1,113 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.modal {
+    background: #ffffff;
+    border-radius: 10px;
+    width: 400px;
+    max-width: 90%;
+    padding: 20px;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.modal-header h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #1c1c21;
+}
+
+.close-button {
+    background: none;
+    border: none;
+    font-size: 16px;
+    color: #55555f;
+    cursor: pointer;
+}
+
+.form label {
+    display: block;
+    font-size: 14px;
+    color: #1c1c21;
+    margin-bottom: 5px;
+}
+
+.form input,
+.form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #e2e2e7;
+    border-radius: 10px;
+    font-size: 14px;
+    font-family: inherit;
+}
+
+.form input:focus,
+.form select:focus {
+    outline: none;
+    border-color: #b93a0c;
+}
+
+.form-row {
+    display: flex;
+    gap: 10px;
+}
+
+.form-row div {
+    flex: 1;
+}
+
+.error-message {
+    margin: 0 0 15px;
+    font-size: 14px;
+    color: #c62828;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.cancel-button,
+.save-button {
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.cancel-button {
+    background: #eeeeee;
+    color: #1c1c21;
+}
+
+.save-button {
+    background: #b93a0c;
+    color: #ffffff;
+}
+
+@media (max-width: 600px) {
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+}

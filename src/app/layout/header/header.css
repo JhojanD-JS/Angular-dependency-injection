@@ -1,0 +1,30 @@
+.header {
+    background: linear-gradient(98deg, #ffffff 35%, #f8ebe7);
+    border-bottom: 1px solid #e2e2e7;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo .icon {
+    background: #b93a0c;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.logo h1 {
+    font-size: 22px;
+    margin: 0;
+}
